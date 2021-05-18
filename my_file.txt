@@ -1,0 +1,6 @@
+Mercedes Transporter 2015|P 6432 KM|4|5.14|150|
+Lexus RX 450h 2010|B 4103 BA|6.2|12.34|1500|
+Chevrolet Montana 2011|CA 7845 XC|6.2|12.34|1500|
+Mercedes Transporter 2015|P 6432 KM|4|5.14|150|
+Lexus RX 450h 2010|B 4103 BA|6.2|12.34|1500|
+Chevrolet Montana 2011|CA 7845 XC|6.2|12.34|1500|
