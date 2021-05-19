@@ -135,13 +135,13 @@ vector <Ride*> Ride::ReadFromFile() {
 void Ride::SaveInFile() {
 	fstream my_file;
 	Vehicle* v1 = GetAssociatedVehicle();
-	my_file.open("my_file1.txt", ios::out);
+	my_file.open("my_file1.txt", ios_base::app);
 	my_file << v1->GetMakeAndModel() << "|" << v1->GetLicensePlate() << "|" << v1->GetGasUsage() << "|" << v1->GetPricePerKm() << "|" << v1->GetTotalKm() << "|" << GetAmountPersons() << "|" << GetCargoVolume() << "|" << GetCargoWeight() << "|"<< GetStartingPrice() << "|" << GetKilometres() << "|" << GetStartingTime() << "|" << GetEndTime() << "|" << endl;
 	my_file.close();
 }
 
 
 string Ride::PrintRide() {
-	return " License plate : " + this->AssociatedVehicle->GetLicensePlate() + to_string(GetAmountPersons()) + to_string(GetCargoVolume()) + to_string(GetCargoWeight()) + to_string(GetStartingPrice()) + to_string(GetKilometres()) + to_string(GetStartingTime()) + to_string(GetEndTime()) + "|\n";
+	return " License plate : " + this->AssociatedVehicle->GetLicensePlate() + " | Amount persons: " + to_string(GetAmountPersons()) + " | Cargo volume: " + to_string(GetCargoVolume()) + " | Cargo weight: " + to_string(GetCargoWeight()) + " | Starting price: " + to_string(GetStartingPrice()) + " | Kilometres: " + to_string(GetKilometres()) + " | Starting time: " + to_string(GetStartingTime()) + " | End time: " + to_string(GetEndTime()) + "|\r\n";
 
 };

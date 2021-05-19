@@ -41,7 +41,9 @@ public:
 	float CalculateConsumedFuel();
 	//float PricePerKm();
 
+
 	string PrintVehicle();
+
 };
 
 

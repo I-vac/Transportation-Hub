@@ -143,7 +143,7 @@ namespace TransporthubFINAL {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(489, 6);
+			this->textBox1->Location = System::Drawing::Point(479, 6);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
@@ -379,7 +379,7 @@ namespace TransporthubFINAL {
 		Vehicle* v1 = new Vehicle();
 		vector<Vehicle*> Vehicles = v1->ReadFromFile();
 		TH->SetVehicles(Vehicles);
-		Ride* ride = new Ride(Vehicles[0],1,1,1,1,1,1,1);
+		Ride* ride = new Ride(Vehicles[0], 4, 600, 1500, 2.45, 15.12, 1621452684, 1621452954);
 		vector<Ride*> rides;
 		rides.push_back(ride);
 		TH->SetRides(rides);
@@ -392,6 +392,7 @@ namespace TransporthubFINAL {
 			String^ str2 = gcnew String(Text.c_str());
 			str2 += "\n";
 			textBox1->Text += str2;
+	
 		}
 		textBox1->Update();
 	}

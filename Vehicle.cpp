@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <sstream>
+#include <iomanip>
 #include "Vehicle.h"
 
 Vehicle::Vehicle() {
@@ -99,7 +101,7 @@ vector < Vehicle*> Vehicle::ReadFromFile() {
 		float GasUsage = stof(CurrentLine[2]);
 		float PricePerKm = stof(CurrentLine[3]);
 		float TotalKm = stof(CurrentLine[4]);
-		Vehicle* vec = new Vehicle(MakeAndModel, LicensePlate, GasUsage, PricePerKm, TotalKm);
+		Vehicle* vec = new Vehicle(MakeAndModel, LicensePlate, GasUsage, PricePerKm, TotalKm );
 		Vehicles.push_back(vec);
 	};
 	return Vehicles;
@@ -112,7 +114,8 @@ void Vehicle::SaveInFile() {
 	my_file.close();
 }
 
+
 string Vehicle::PrintVehicle() {
-	return "The model is: "+ GetMakeAndModel() +" | License plate : " + GetLicensePlate() + " | Gas usage : " + to_string(GetGasUsage()) + " | Price per Km " + to_string(GetPricePerKm()) + " | Total Km" + to_string(GetTotalKm()) + "|\n";
+	return "The model is: "+ GetMakeAndModel() +" | License plate : " + GetLicensePlate() + " | Gas usage : " + to_string(GetGasUsage()) + " | Price per Km " + to_string(GetPricePerKm()) + " | Total Km" + to_string(GetTotalKm()) + "|\r\n";
 	
 };
